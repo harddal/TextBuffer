@@ -5,4 +5,6 @@ To use the text buffer just create the class and call the Update() member in you
 The class also requires you to load a font texture, one to use can be found at cartman300's GitHub page <a href="https://github.com/cartman300/SFMLTextBuffer">here</a>
 
 Credits:
-  cartman300 - Original C# code
+  cartman300 - Original C# code, https://github.com/cartman300
+
+cartman300 owns all rights to this code, I only provide it as a translation to allow its use in C++.
