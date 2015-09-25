@@ -133,10 +133,11 @@ void TextBuffer::Print(int I, const std::string &Str, sf::Color Fg, sf::Color Bg
 	}
 }
 
-void TextBuffer::Update(sf::RenderWindow &window)
+void TextBuffer::Update()
 {
 	if (!Dirty)
 		return;
+
 	Dirty = false;
 
 	ForeData.update(ForeDataRaw.data());
@@ -151,6 +152,11 @@ void TextBuffer::Update(sf::RenderWindow &window)
 	RT.clear(sf::Color::Transparent);
 	RT.draw(ScreenQuad.data(), 4, sf::PrimitiveType::Quads, TextStates);
 	RT.display();
-	
+}
+
+void TextBuffer::Draw(sf::RenderWindow &window)
+{
+	Update();
+
 	window.draw(Sprite);
 }

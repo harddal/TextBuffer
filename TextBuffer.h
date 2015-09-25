@@ -62,9 +62,11 @@ public:
 	void Print(int I, const std::string &Str);
 	void Print(int I, const std::string &Str, sf::Color Fg, sf::Color Bg);
 
-	void Update(sf::RenderWindow &window);
+	void Draw(sf::RenderWindow &window);
 
 private:
+	void Update();
+
 	sf::Shader TextBufferShader;
 
 	int W, H, CharW, CharH;
